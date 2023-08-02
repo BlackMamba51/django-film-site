@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block title %}<title>Kinopoisk</title>{% endblock %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+
+    <header>
+        <div class="header">
+            <div class="container">
+                <div class="header__body">
+                    <div class="header__row">
+                        <div class="logo">КИНОПОИСК</div>
+                        <div>
+                            <input type="search" placeholder="Искать фильм, сериал и т.п." name="search">
+                        </div>
+                        <div class="login">Войти</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="container">
+           <div class="sidebar">
+              <ul>
+                  <li><a href="#">Главная</a></li>
+                  <li><a href="#">Фильмы</a></li>
+                  <li><a href="#">Сериалы</a></li>
+                  <li><a href="#">Медиа</a></li>
+              </ul>
+            </div>
+            <div class="content">
+                {% block content %} {% endblock %}
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
