@@ -1,8 +1,26 @@
 {% extends "base_generic.html" %}
 
 {% block content %}
-    <div class="poster">
-        <img src="{{ poster }}">
+
+    <div class="main-poster" style="background-image: url('{{ poster }}')">
+        <img class="film-logo" src="{{ logo }}">
+        <div class="persons">
+            <p class="film-description person-info">{{ description }}</p>
+            <div class="actors person-info">
+                <span><b>В главных ролях:</b></span>
+                    {% for actor in actors %}
+                        {% if actor == actors.3 %}
+                            <span>{{ actor }}</span>
+                        {% else %}
+                            <span>{{ actor }},</span>
+                        {% endif %}
+                    {% endfor %}
+            </div>
+            <div class="director person-info">
+                <span><b>Режиссер:</b> {{ director }}</span>
+            </div>
+        </div>
+        <a class="trailer_link" href="{{ trailer_link }}" target="_blank">Смотреть трейлер</a>
     </div>
 
 {% endblock %}

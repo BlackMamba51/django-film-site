@@ -1,0 +1,12 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+    <div class="movies__container">
+        {% for poster in posters %}
+            <div class="film-poster">
+                <img src="{{ poster }}">
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

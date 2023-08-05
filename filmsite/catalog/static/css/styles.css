@@ -20,7 +20,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
     max-width: 1440px;
     margin: 0 auto;
 }
-
+/* header */
 .header {
     height: 80px;
     background-color: #141414;
@@ -52,10 +52,16 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
     text-shadow: 1px 1px red;
 }
 
+
+/* main content */
+.wrapper {
+    background-color: #f4f4f4;
+}
 .wrapper .container {
     display: flex;
     align-items: center;
     padding-top: 40px;
+    background-color: #fff;
 }
 .sidebar {
     width: 15%;
@@ -65,13 +71,53 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
     margin-left: 40px;
 }
 
-.poster {
-    max-width: 65%;
+.main-poster {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    max-width: 75%;
     margin: 0 auto;
-}
-.poster img {
-    width: 100%;
+    background-size: cover;
+    height: 450px;
     border-radius: 15px;
+}
+.film-logo {
+    width: 50%;
+    margin-left: 20px;
+}
+.film-description {
+    width: 50%;
+}
+.person-info {
+    color: #fff;
+    line-height: 1.2;
+    padding: 10px 0px 10px 20px;
+}
+.trailer_link {
+    margin-left: 20px;
+    width: 150px;
+    text-decoration: none;
+    background: linear-gradient(135deg,#f50 69.93%,#d6bb00);
+    padding: 20px;
+    border-radius: 100px;
+    color: #fff;
+    font-weight:500;
+    transition: all .6s ease;
+}
+.trailer_link:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+/* movies page */
+
+.movies__container {
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+}
+
+.film-poster img {
+    width: 100%;
+    border-radius: 10px;
 }
 
 
